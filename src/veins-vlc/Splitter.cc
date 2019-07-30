@@ -100,7 +100,6 @@ void Splitter::handleUpperMessage(cMessage* msg)
         EV_INFO << "VLC head message received from upper layer!" << std::endl;
 
         if (draw) {
-            // Won't draw at simTime() < 0.1 as TraCI is not connected and annotation fails
             auto drawCones = [this]() {
                 // Headlight, right
                 drawRayLine(vlcPhys[0]->getAntennaPosition(), 100, headHalfAngle);
